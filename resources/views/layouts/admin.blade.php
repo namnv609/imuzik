@@ -31,7 +31,7 @@
                     <ul class="nav pull-right top-menu">
                         <li class="dropdown">
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                <span class="username">Administrator</span>
+                                <span class="username">{{ auth()->user()->name }}</span>
                                 <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu extended logout">
@@ -43,7 +43,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="login.html">
+                                    <a href="/admin/logout">
                                         <i class="icon_key_alt"></i>
                                         {{ __("admins.layout.top_nav.logout") }}
                                     </a>

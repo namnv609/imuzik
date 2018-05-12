@@ -27,5 +27,8 @@ return [
             "forgot_password" => "Quên mật khẩu?",
             "login" => "Đăng nhập",
         ],
+        "messages" => [
+            "login_invalid" => "Email hoặc mật khẩu không chính xác",
+        ],
     ],
 ];
