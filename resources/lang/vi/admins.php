@@ -8,7 +8,7 @@ return [
     "layout" => [
         "top_nav" => [
             "my_profile" => "Tài khoản",
-            "logout" => "Thoát"
+            "logout" => "Thoát",
         ],
         "sidebar" => [
             "dashboard" => "Bảng điều khiển",
@@ -16,7 +16,16 @@ return [
             "list" => "Danh sách",
             "new" => "Thêm mới",
             "song" => "Bài hát",
-            "configuration" => "Cấu hình"
+            "configuration" => "Cấu hình",
+        ],
+    ],
+    "sessions" => [
+        "index" => [
+            "email" => "Email",
+            "password" => "Mật khẩu",
+            "remember_me" => "Ghi nhớ đăng nhập",
+            "forgot_password" => "Quên mật khẩu?",
+            "login" => "Đăng nhập",
         ],
     ],
 ];

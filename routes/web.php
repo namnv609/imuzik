@@ -21,4 +21,11 @@ Route::get('/', function () {
 
 Route::group(["namespace" => "Admin", "prefix" => "admin"], function() {
     Route::get("/", "DashboardsController@index");
+
+    /**
+     * Session routes
+     */
+    Route::group(["prefix" => "login"], function() {
+        Route::get("/", "SessionsController@index");
+    });
 });
