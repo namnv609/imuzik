@@ -23,23 +23,29 @@
     </head>
     <body class="login-img3-body">
         <div class="container">
-            <form class="login-form" action="index.html">
+            <form class="login-form" method="POST" action="/admin/login">
+                {!! csrf_field() !!}
                 <div class="login-wrap">
                     <p class="login-img"><i class="icon_lock_alt"></i></p>
+                    @if ($errors->count())
+                        <div class="alert alert-block alert-danger">
+                            {{ $errors->first() }}
+                        </div>
+                    @endif
                     <div class="input-group">
                         <span class="input-group-addon">
                             <i class="icon_profile"></i>
                         </span>
-                        <input type="text" class="form-control" placeholder="{{ __("admins.sessions.index.email") }}" autofocus>
+                        <input type="text" class="form-control" name="email" placeholder="{{ __("admins.sessions.index.email") }}" autofocus>
                     </div>
                     <div class="input-group">
                         <span class="input-group-addon">
                             <i class="icon_key_alt"></i>
                         </span>
-                        <input type="password" class="form-control" placeholder="{{ __("admins.sessions.index.password") }}">
+                        <input type="password" class="form-control" name="password" placeholder="{{ __("admins.sessions.index.password") }}">
                     </div>
                     <label class="checkbox">
-                        <input type="checkbox" value="remember-me">
+                        <input type="checkbox" value="1" name="remember_me">
                         {{ __("admins.sessions.index.remember_me") }}
                         <span class="pull-right">
                             <a href="#">{{ __("admins.sessions.index.forgot_password") }}</a>

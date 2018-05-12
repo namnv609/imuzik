@@ -20,12 +20,16 @@ Route::get('/', function () {
  */
 
 Route::group(["namespace" => "Admin", "prefix" => "admin"], function() {
-    Route::get("/", "DashboardsController@index");
-
     /**
      * Session routes
      */
     Route::group(["prefix" => "login"], function() {
         Route::get("/", "SessionsController@index");
+        Route::post("/", "SessionsController@create");
+    });
+    Route::get("/logout", "SessionsController@destroy");
+
+    Route::group(["middleware" => ["admin"]], function() {
+        Route::get("/", "DashboardsController@index");
     });
 });
