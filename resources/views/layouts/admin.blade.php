@@ -57,12 +57,12 @@
                 <div id="sidebar"  class="nav-collapse ">
                     <ul class="sidebar-menu">
                         <li>
-                            <a href="/admin">
+                            <a href="{{ route("dashboards.index") }}">
                                 <i class="icon_house_alt"></i>
                                 <span>{{ __("admins.layout.sidebar.dashboard") }}</span>
                             </a>
                         </li>
-                        <li class="sub-menu">
+                        <li class="sub-menu {{ active_submenu(["admin/albums"]) }}">
                             <a href="#">
                                 <i class="icon_book_alt"></i>
                                 <span>{{ __("admins.layout.sidebar.album") }}</span>
@@ -70,7 +70,7 @@
                             </a>
                             <ul class="sub">
                                 <li>
-                                    <a href="#">
+                                    <a href="{{ route("albums.index") }}">
                                         <i class="icon_menu"></i>
                                         {{ __("admins.layout.sidebar.list") }}
                                     </a>

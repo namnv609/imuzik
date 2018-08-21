@@ -30,6 +30,13 @@ Route::group(["namespace" => "Admin", "prefix" => "admin"], function() {
     Route::get("/logout", "SessionsController@destroy");
 
     Route::group(["middleware" => ["admin"]], function() {
-        Route::get("/", "DashboardsController@index");
+        Route::get("/", "DashboardsController@index")->name("dashboards.index");
+
+        /**
+         * Albums routes
+         */
+        Route::group(["prefix" => "albums"], function() {
+            Route::get("/", "AlbumsController@index")->name("albums.index");
+        });
     });
 });
