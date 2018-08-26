@@ -31,4 +31,14 @@ return [
             "login_invalid" => "Email hoặc mật khẩu không chính xác",
         ],
     ],
+    "albums" => [
+        "index" => [
+            "heading_title" => "Danh sách album",
+            "id" => "ID",
+            "name" => "Tên album",
+            "description" => "Mô tả",
+            "cover" => "Ảnh bìa",
+            "edit" => "Sửa",
+        ],
+    ],
 ];
